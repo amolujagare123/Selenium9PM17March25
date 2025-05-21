@@ -3,15 +3,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
-public class AISites {
+public class AISites extends Base {
 
-    WebDriver driver;
-
-    @BeforeClass
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
 
     @Test
     public void openai() {
@@ -33,9 +26,6 @@ public class AISites {
         driver.get("https://www.anthropic.com");
     }
 
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
+
 }
 

@@ -1,0 +1,24 @@
+
+<suite name="SiteTestsSuite">
+
+    <listeners>
+        <listener class-name="ReportsDemo.util.MyExtentListener"/>
+    </listeners>
+
+    <test name="AllSiteTests 1">
+        <classes>
+            <class name="TestNGDemo.DemoReal.SocialSites"/>
+            <class name="TestNGDemo.DemoReal.JobSites"/>
+
+        </classes>
+    </test>
+
+    <test name="AllSiteTests 2">
+        <classes>
+
+            <class name="TestNGDemo.DemoReal.TutorialSites"/>
+            <class name="TestNGDemo.DemoReal.AISites"/>
+        </classes>
+    </test>
+
+</suite>

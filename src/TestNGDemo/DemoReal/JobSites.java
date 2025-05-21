@@ -2,21 +2,17 @@ package TestNGDemo.DemoReal;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.*;
 
-public class JobSites {
+public class JobSites  extends Base  {
 
-    WebDriver driver;
 
-    @BeforeClass
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
 
     @Test
     public void naukri() {
         driver.get("https://www.naukri.com");
+        Assert.assertEquals(driver.getTitle(),"Naukri site","wrong page");
     }
 
     @Test
@@ -34,8 +30,5 @@ public class JobSites {
         driver.get("https://www.glassdoor.com");
     }
 
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
+
 }

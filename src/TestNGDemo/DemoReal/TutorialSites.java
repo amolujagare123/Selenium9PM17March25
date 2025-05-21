@@ -4,15 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 
-public class TutorialSites {
+public class TutorialSites  extends Base  {
 
-    WebDriver driver;
-
-    @BeforeClass
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
 
     @Test
     public void w3schools() {
@@ -34,8 +27,5 @@ public class TutorialSites {
         driver.get("https://www.javatpoint.com");
     }
 
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
+
 }
